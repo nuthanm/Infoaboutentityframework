@@ -35,7 +35,7 @@ Platform: Udemy
 3. Using the Migrations script, we generate the database and objects along with migration versions
    - Install Nuget Package: Microsoft.EntityFrameworkCore.Tools, this is for migration
    - Run using .bat file or using Package Manager Console
-     - First thing, we should select the project where DB Context file resides
+     - First thing, we should select the project where the DB Context file resides
      - _**Commands to run**_
      - > **get-help entityframework** => gives what leverages we do with this entity-framework
      - > **add-migration <NameOftheMigration>** Ex: add-migration InitialMigration
@@ -72,7 +72,7 @@ TODO
 
 ### Useful Extensions
 1. In Visual Studio, Under extensions:
-   - "EF Core Power Tools" => Helps in visualize our database objects. After this successfull installation we no need to go and see the same in SSMS.
+   - "EF Core Power Tools" => **View Diagram** = Helps in visualizing our database objects. After this successful installation we not need to go and see the same in SSMS.
       - Sometimes we don't have access to create or view ER diagrams using SSMS in that case this option is really helpful
         
 **Screenshot:**
@@ -85,7 +85,30 @@ TODO
 
 **Note:**Once it is downloaded VS requires to restart and then you can find this option in the project context menu.
 
+**Installer**
+![image](https://github.com/nuthanm/Infoaboutentityframework/assets/29816449/82fc175c-4396-478e-a992-547d58070e54)
+
+
 **After Installation:**
+_Context menu looks like below,_
+![image](https://github.com/nuthanm/Infoaboutentityframework/assets/29816449/409c8021-4718-4729-bb86-584d711d3b5d)
+![image](https://github.com/nuthanm/Infoaboutentityframework/assets/29816449/e175f204-3f06-4590-98b9-1d8928e403b4)
+
+
+
+**Adding Verbose Logging to EF Core's Workload**:
+
+**Code:**
+optionsBuilder.UseSqlServer("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=FootballLeague_EfCore")
+              .LogTo(Console.WriteLine, new[] { DbLoggerCategory.Database.Command.Name }, LogLevel.Information)
+              .EnableSensitiveDataLogging();
+              
+**EnableSensitiveDataLogging()** => As per the above code, we are logging the query and its data in the console window this way we can see what values we are passing, and helps during debugging.
+
+_**Sample log message(s)**_
+![image](https://github.com/nuthanm/Infoaboutentityframework/assets/29816449/4a23ddbc-a62e-497d-8d24-ea9c0d26f91e)
+![image](https://github.com/nuthanm/Infoaboutentityframework/assets/29816449/15672564-7a5b-4136-90ce-1807f0a0ae08)
+
 
 
   
