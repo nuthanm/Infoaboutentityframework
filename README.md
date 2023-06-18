@@ -108,6 +108,7 @@ optionsBuilder.UseSqlServer("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog
 _**Sample log message(s)**_
 ![image](https://github.com/nuthanm/Infoaboutentityframework/assets/29816449/4a23ddbc-a62e-497d-8d24-ea9c0d26f91e)
 ![image](https://github.com/nuthanm/Infoaboutentityframework/assets/29816449/15672564-7a5b-4136-90ce-1807f0a0ae08)
+![image](https://github.com/nuthanm/Infoaboutentityframework/assets/29816449/d3bd61fb-9782-4f70-b66f-de0869a8f32a)
 
 
 
